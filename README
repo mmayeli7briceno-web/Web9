@@ -1,0 +1,8 @@
+# Tarea 09 de esta semana:
+1. Construir una Web sencilla utilizando Bootstrap o Bulma CSS (solo uno de ellos) está prohibido generar CSS con alguna IA
+2. Solo realizarán una interfaz donde: En la parte superior se tendrá un NAVBAR, luego en la parte inferior una TABLA HTML con datos de cualquier tipo (productos, clientes, proveedores, etc.) En la última columna de esta tabla agregar colocar dos botones: ELIMINAR / EDITAR.
+3. Agregar un botón que permita abrir un componente DIALOG o MODAL (según la librería que utilice), se mostrará sobre la Web un formulario que debería permitir el registro de datos.
+4. NO se requiere programar el Backend, solo es maquetación.
+5. Utilice iconos y trate en lo posible de construir una interfaz limpia, intuitiva y fácil de utilizar
+6. Está prohibido generar el trabajo con alguna IA, de detectarse esta automatización, se considerará nota 0
+7. Subir el repositorio hasta el día de hoy, y trabajar la actividad hasta el día miércoles como plazo máximo.
