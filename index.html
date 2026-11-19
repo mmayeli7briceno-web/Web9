@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,42 +14,52 @@
 </head>
 
 <body>
-<nav class="navbar md:navbar-expand bg-1 fg-2">
+  <nav class="navbar bg-1 fg-2">
   <div class="container-fluid">
-    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarProductos" aria-controls="navbarProductos" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" aria-hidden="true"></span>
-    </button>
-    <dialog class="drawer drawer-end" tabindex="-1" id="navbarProductos" aria-labelledby="navbarProductosLabel">
-      <div class="drawer-header">
-        <h5 class="drawer-title" id="navbarProductosLabel">Sistema de Almacén</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
-      </div>
-      <div class="drawer-body">
-        <a class="navbar-brand" href="#">Sistema de Almacén</a>
-        <ul class="navbar-nav me-auto mb-2 md:mb-0">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Productos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Categorías</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Proveedores</a></li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar producto..." aria-label="Search"/>
-          <button class="btn-outline theme-success" type="submit">Buscar</button>
-        </form>
-      </div>
-    </dialog>
+    <a class="navbar-brand">Productos</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn-outline theme-success" type="submit">Search</button>
+    </form>
   </div>
 </nav>
 
+<div class="container mt-24">
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2>Subtítulo</h2>
+  <button type="button" class="btn-solid theme-primary" onclick="document.getElementById('ventanaRegistro').showModal()">+</button>
+</div>
+
+<dialog id="ventanaRegistro">
+  <form method="dialog">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We’ll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-field">
+      <input type="checkbox" id="exampleCheck1" class="check">
+      <label for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn-solid theme-primary">Submit</button>
+  </form>
+</dialog>
+
 <div class="row">
-  <div class="table-responsive">
-    <table class="table">
+  <div class="border rounded overflow-hidden">
+    <table class="table table-striped mb-0">
       <thead>
         <tr>
-          <th>ID</th>
+          <th> </th>
               <th>Producto</th>
               <th>Categoría</th>
               <th>Precio</th>
               <th>Stock</th>
+              <th>Operaciones</th>
         </tr>
       </thead>
       <tbody>
@@ -58,21 +69,51 @@
         <!-- (tr>(td{$}+td{Nombre de Software}+td{100 Mb}+td{Microsoft}+td{2.0}))*10 -->
         <tr>
           <td>1</td>
-              <td>Laptop Lenovo IdeaPad 3</td>
-              <td>Computadoras</td>
-              <td>S/ 2,450.00</td>
-              <td>15</td>
+            <td>Laptop Lenovo</td>
+            <td>Computadoras</td>
+            <td>S/ 2,450.00</td>
+            <td>10</td>
+          <td>
+            <button type="button" class="btn theme-danger">Eliminar</button>
+            <button type="button" class="btn theme-warning">Editar</button>
+          </td>
         </tr>
         <tr>
           <td>2</td>
-              <td>Mouse Inalámbrico Logitech M185</td>
-              <td>Accesorios</td>
-              <td>S/ 55.00</td>
-              <td>40</td>
+            <td>Mouse Inalámbrico</td>
+            <td>Accesorios</td>
+            <td>S/ 55.00</td>
+            <td>23</td>
+          <td>
+            <button type="button" class="btn theme-danger">Eliminar</button>
+            <button type="button" class="btn theme-warning">Editar</button>
+          </td>
+        <tr>
+          <td>1</td>
+            <td>Laptop Lenovo</td>
+            <td>Computadoras</td>
+            <td>S/ 2,450.00</td>
+            <td>10</td>
+          <td>
+            <button type="button" class="btn theme-danger">Eliminar</button>
+            <button type="button" class="btn theme-warning">Editar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+            <td>Mouse Inalámbrico</td>
+            <td>Accesorios</td>
+            <td>S/ 55.00</td>
+            <td>23</td>
+          <td>
+            <button type="button" class="btn theme-danger">Eliminar</button>
+            <button type="button" class="btn theme-warning">Editar</button>
+          </td>
         </tr>
       </tfoot>
     </table>
   </div>
+</div>
 </div>
 </div>
 
